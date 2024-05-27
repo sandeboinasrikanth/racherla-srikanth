@@ -1,13 +1,70 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  letter-spacing: 1px;
 }
+.movie-container{
+  background: whitesmoke;
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto;
+}
+ .each-movie{
+  background: white;
+  border: 1px solid rgb(108, 108, 108);
+}
+/*------ PropsExample1 ------------*/
+.posts-container{
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+.profile-card{
+  width: 100%;
+  height: 100%;
+  border: 1px solid gray;
+  box-shadow: 0px 0px 8px 2px rgb(132, 132, 132);
+
+}
+.profile-card img{
+  width: 100%;
+  height: 100%;
+}
+.profile-card .title{
+  margin-top: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 0 5px 0 10px;
+  font-size: 16px;
+  
+  
+}
+.profile-card a{
+  display: inline-block;
+  border: 1px solid black;
+  margin-top: 20px;
+  color: red;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin: 20px 0 10px 10px
+
+}
+
+@media screen and (min-width: 768px) {
+  .posts-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* ----------- */
