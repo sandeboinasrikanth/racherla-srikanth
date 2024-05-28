@@ -1,8 +1,7 @@
 /*
 website: react.org , react.dev
-=> A javascript library for building  user interface.
-=> Reactjs was created by Facebook And it is open soure.
-=> Reactjs is single page Application.
+=> A javascript library for building  user interface & also used to build (SPA)single page Application.
+=> Reactjs was created by Facebook in 2011 by Jorden Walke. And it is open soure.
 => To know react before you have to understand the pre-requisites like: HTML, CSS, JAVASCRIPT.
 
 
@@ -197,13 +196,14 @@ Note:
 {}  => Template Syntax
 JSX =>  stands for JavaScript XML.
 JSX allows us to write HTML in React.
-JSX makes it easier to write and add HTML in React.
+JSX makes it easier to write and add HTML in React Application.
 
 className => instead of class keyword
 weback+babel
 Jsx - js
 onClick={} => use camelCase
 object => key value pairs
+assets - images folder
 ----------------------------------------------------------------------------------
 
 //React Render Elements:
@@ -356,8 +356,145 @@ Note:
 ----------------------------------------------------------------------------------------
 // React Components and Props:
 => props:(properties) -pass aruguments to components.
+=>looping Methods 
+=>instead of using props use Destructuring[removing props to read code flexible] 
 
 Example:1 
+    import React from 'react'
+
+    function Welcome(){
+        return(
+            <Hello name="Srikanth"  />
+        )
+    }
+
+    const Hello=(props)=>{
+        return <h1>{props.name}</h1>
+    }
+
+    export default Welcome;
+
+
+
+Example:2 
+    import React from 'react'
+
+    function PropsLooping() {
+        const names =["Mayuri","Abhay","Kavya"];
+
+        const students = [
+            {
+                name:"Mayuri",
+                pic:"https://mrwallpaper.com/images/thumbnail/cute-brunette-profile-picture-rawnnhmrk168c9zk.webp"
+            },
+            {
+                name:"Abhay",
+                pic:"https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/e76d4296-43f3-493b-9d50-f8e5c142d06c/2117667014/boys-profile-picture-screenshot.png"
+            },
+            {
+                name:"Kavya",
+                pic:"https://lh3.googleusercontent.com/proxy/vZikguU11qZpIr5SgoBHDixru7qQYP3KFoXJQuGVUQwmaW1tOABH0jLlqFjFBH0bWZ4-TsP956vXScnfbo14sc4bjzDTwAtWxUaHetXijjXc_gizWe3FN01r3CUhkUZJ5Ogudyo98mZg406rnq27lvgAZkI8Nk4N4A"
+            },
+        ]
+
+    return (
+        <div>
+            // component + loop
+            {names.map((nm)=>{
+                return <NameComp names={nm} />
+                })}
+        
+                {students.map((stu)=>{
+                    const {name, pic} = stu
+                    return <LoopingMethod name={name} pic={pic} />
+                })}
+            </div>
+        )
+        }
+        
+        const LoopingMethod=({name,pic})=>{
+            return(
+                <section>
+                    
+                    <div className='profile-container'>
+                        <img className='profile-pic' src={pic} alt={name} />
+                        <h1>Hello,{name} </h1>
+                    </div>
+                </section>
+            )
+        }
+        
+        const NameComp=({names})=>{
+            return <div>
+            <h2>{names}</h2>
+        </div>
+        }
+        
+    export default PropsLooping
+ -------------------------------------------------------------------------------------------   
+// Event Handling: 
+=>  onClick, onMouseEnter
+
+    import React from 'react'
+
+    function EventHandling() {
+        // const clickHandle =(e)=>{
+        //     return console.log(e)
+        // }
+
+        function clickHandle(e, firstName){
+            return(
+                console.log("I am cooming from regular fun",e, firstName)
+            )
+        }
+
+    return (
+        <div>
+        <button onClick={()=> console.log("I am coming from Inline")} className='button'>Click Me</button>
+        <br /><br />
+
+        <button onClick={(e)=>{
+            return clickHandle(e,"srikanth")
+        }} className='button'>Click here</button>
+        </div>
+    )
+    }
+
+    export default EventHandling
+
+Note:
+onClick ={clickHandle("Srikanth")} //Don't pass aruguments like the issue are:
+-> without Clicking function will called
+-> suppose if you click function it will not work
+-> event is not coming insted of (e) srikanth
+->first name place showing undefined
+
+---------------------------------------------------------------------------
+//Types of exports:
+// 1.named import/exports - preferred - add multiple
+// 2.default import/exports - only one, accept different name while importing.
+
+//named import
+function Welcome(props){
+    return(
+      <div>
+        <h1>Hello {props.name} ⭐👍</h1>
+      </div>
+    )
+    
+  }
+
+const double = (n)=>n*2;
+
+// export default Welcome;   // default export    //accept different name while importing.
+
+
+
+export {Welcome, double};  // named export
+============================================================================
+//React Hooks:
+=>Hooks - functions - react development will be easy
+=>hooks - can be used inside the function component.
 
 
 
