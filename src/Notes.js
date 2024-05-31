@@ -489,14 +489,92 @@ const double = (n)=>n*2;
 // export default Welcome;   // default export    //accept different name while importing.
 
 
-
 export {Welcome, double};  // named export
 ============================================================================
 //React Hooks:
 =>Hooks - functions - react development will be easy
 =>hooks - can be used inside the function component.
 
+types of hooks : useState,useEffect,useContext,
+1.useState 
+=> It is a function calling using useState()
+=>to store value in variable 
+=>in state you can take value,string, object,array of object,
 
+Note:
+// count => default value 
+// setCount => function to change the default value
+// to store values we will use states
+
+
+ const [count, setCount ]=useState(10);
+  console.log(count);  
+  console.log(setCount)
+
+Example:1 
+
+    import React, {useState} from 'react'
+    const Index =()=>{
+    // const arr = useState(20);
+    // console.log(arr);
+    // console.log(arr[0]);
+    // console.log(arr[1]);
+
+    const [count, setCount ]=useState(0);
+    // console.log(count);  
+    // console.log(setCount)
+
+    const incrementCount =()=>{
+        // setCount(count+1);
+        setCount((prevCount)=>{
+        return  prevCount +1;
+        })
+        setCount((prevCount)=> prevCount+1)
+
+    }
+
+    const decrementCount =()=>{
+        // setCount(count-1);
+        setCount((prevCount)=>prevCount-1)
+        setCount((prevCount)=>prevCount-1)
+    }
+    
+    
+    return(
+        <div>
+        <button onClick={decrementCount} >DECREMENT</button>
+        <span > Count: {count} </span>
+        <button onClick={incrementCount} >INCREMENT</button>
+        </div>
+    )
+    }
+
+// condition Rendering 
+import React,{useState} from 'react'
+
+function UseStateEx1() {
+    const [show, setShow]=useState(true);
+
+    const handleShow=()=>{
+        // setShow(!show)
+        setShow(!show)
+    }
+
+
+  return (
+    <div>
+      <button onClick={handleShow} className='btn'>{show ? "hide":"show" }</button>
+      {show ? <p className='content'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Placeat doloribus non unde saepe deserunt iste et vero voluptate hic quam?
+      </p> : null}
+      {show && <p>ssssssssssssssssss</p>}
+      
+    </div>
+  )
+}
+
+export default UseStateEx1
 
 
 */
