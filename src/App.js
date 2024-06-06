@@ -6,6 +6,7 @@ import PropsExample2 from "./React Notes/PropsExample2";
 import PropsLooping from "./React Notes/PropsLooping";
 import PropsExample3 from "./React Notes/PropsExample3";
 import EventHandling from "./React Notes/EventHandling";
+import App2 from "./React practice/App2";
 
 import App1 from "./React Hooks Notes/App1";
 
@@ -22,6 +23,7 @@ function App(){
       {/* <EventHandling /> */}
 
       <App1/>
+      {/* <App2 /> */}
     </div>
   )
 }

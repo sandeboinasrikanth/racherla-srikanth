@@ -13,4 +13,23 @@
     margin-right: 2px;
   }
 
-/*-------------- UseStateEx1------------ */
+/*-------------- UseEffectEx2------------ */
+.cocktail-data{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  text-align: center;
+  margin: 10px;
+}
+.cocktail-data li img{
+  width: 100%;
+  max-width: 250px;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 769px) {
+  .cocktail-data{
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr ;
+  }
+}

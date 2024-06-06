@@ -575,7 +575,17 @@ function UseStateEx1() {
 }
 
 export default UseStateEx1
+----------------------------------------------
+// useEffect:
+=> useEffect is a function passing another function as a argument (callback)
+mounting => Component mounting 
+when ever useState func State changes component re-render is called useEffect.
 
+button click - state changes - component re-Render - useEffect call avuthundi.
+
+=>useEffect take 2 aruguments(callback function , dependencies)
+=> useState - used for data saving
+=> useEfect - used for Api fetching
 
 */
 
