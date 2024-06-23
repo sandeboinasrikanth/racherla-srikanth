@@ -8,6 +8,8 @@ import UseEffect from './UseEffect';
 import AdvanceUseEffect from './AdvanceUseEffect';
 import UseEffectEx1 from './UseEffectEx1';
 import UseEffectEx2 from './UseEffectEx2';
+import UseContext from './UseContext';
+
 
 
 function App1() {
@@ -22,7 +24,9 @@ function App1() {
       {/* <UseEffect /> */}
       {/* <AdvanceUseEffect /> */}
       {/* <UseEffectEx1 /> */}
-      <UseEffectEx2 />
+      {/* <UseEffectEx2 /> */}
+
+      <UseContext/>
       
     </div>
   )

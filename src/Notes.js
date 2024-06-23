@@ -587,6 +587,16 @@ button click - state changes - component re-Render - useEffect call avuthundi.
 => useState - used for data saving
 => useEfect - used for Api fetching
 
+//Api => https://jsonplaceholder.typicode.com/users & cocktail api
+
+----------------------------------------------------------
+
+//useContext:
+props Drilling : to avoid props drilling we use useContext
+1.performance
+2.Resuability
+3.Forceful
+
 */
 
 
