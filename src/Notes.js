@@ -596,6 +596,20 @@ props Drilling : to avoid props drilling we use useContext
 1.performance
 2.Resuability
 3.Forceful
+-------------------------------------------
+
+As of now we learned
+useState = state
+useEffect = fetching || side effects
+useContext = context || global state 
+useReducer = reducer
+
+----------------------------
+useReducer:
+-> useReducer is a hook that is used for state management
+-> It is Alternative to useState
+-> Internally useReducer using useState hook only
+-> when to use useReducer & useState ?
 
 */
 
