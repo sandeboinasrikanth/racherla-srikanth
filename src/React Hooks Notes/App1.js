@@ -11,6 +11,9 @@ import UseEffectEx2 from './UseEffectEx2';
 import UseContext from './UseContext';
 import UseReducer from './UseReducer';
 import UseReducerEx1 from './UseReducerEx1';
+import UseRefEx1 from './UseRefEx1';
+import UseRefEx2 from './UseRefEx2';
+import UseMemo from './UseMemo';
 
 
 
@@ -31,7 +34,12 @@ function App1() {
       {/* <UseContext/> */}
 
       {/* <UseReducer /> */}
-      <UseReducerEx1 />
+      {/* <UseReducerEx1 /> */}
+
+      {/* <UseRefEx1 /> */}
+      {/* <UseRefEx2 /> */}
+
+      <UseMemo/>
       
     </div>
   )

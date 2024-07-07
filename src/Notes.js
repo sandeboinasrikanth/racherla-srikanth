@@ -610,6 +610,13 @@ useReducer:
 -> It is Alternative to useState
 -> Internally useReducer using useState hook only
 -> when to use useReducer & useState ?
+-------------------------------------
+useRef:
+-> update aina prathisari useRef render kadu
+-------------------------------------
+
+useMemo:
+-> 
 
 */
 
